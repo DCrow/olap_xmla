@@ -7,7 +7,7 @@ module OlapXmla
     def to_s
       "
         Error: #{@response[:error]}
-        Cube: #{@response[:client].data_source}\\#{@response[:client].catalog}
+        Cube: #{@response[:client].cube_name}
         MDX: #{@response[:mdx]}"
     end
   end

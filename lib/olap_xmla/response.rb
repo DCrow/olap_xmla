@@ -66,7 +66,7 @@ module OlapXmla
     def map_columns
       matrix.collect do |row|
         result = {}
-        row.each_with_index{|value, index| result["column_#{index}".to_sym] = value }
+        row.each.with_index{|value, index| result["column_#{index}".to_sym] = value }
         result
       end
     end
